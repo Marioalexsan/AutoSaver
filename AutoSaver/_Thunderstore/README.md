@@ -1,12 +1,14 @@
 # AutoSaver
 
-Automatically backups your character save and Spike's inventory on game load, quit and every 4 minutes.
+Automatically backups your character save and Spike's inventory on game load, quit, manual saves, and every 4 minutes of time elapsed since last save.
 
 Up to 15 saves are stored. You can configure both the number of saves stored and the automatic save interval in `BepInEx/config/Marioalexsan.AutoSaver.cfg`.
 
 You can also configure the mod to trigger autosaving whenever the map instance changes.
 
 If you have [EasySettings](https://thunderstore.io/c/atlyss/p/Nessie/EasySettings/), then Autosaver will provide UI options for configuring some of the settings in its mod menu.
+
+If you have [MoreBankTabsFixed](https://thunderstore.io/c/atlyss/p/SnivyXXY/MoreBankTabsFixed/), then AutoSaver will also save the extra slots created by that mod.
 
 # Restoring saves from backups
 
@@ -31,12 +33,13 @@ In addition to the `_latest` save files that are saved on any game version, the 
 
 # Mod Compatibility
 
-This mod version targets ATLYSS v1.6.2b. It also has experimental support for the public test branch (version 2.0.5d).
+This mod version targets ATLYSS 72025.a8.
 
 The mod has compatibility with the following mods:
 
-- "More Bank Tabs" v0.1.1 - if this mod is detected, AutoSaver will try to backup the three extra slots created by it.
-  - Extra slots will follow the format `MoreBankTabs_itemBank_{X}`, where X is the extra slot.
-- Nessie's EasySettings v1.1.6 (optional dependency used for configuration)
+- SnivyXXY's MoreBankTabsFixed v1.0.0 - if this mod is detected, AutoSaver will try to backup the three extra slots created by it.
+  - Extra slots will follow the format `MoreBankTabsFixed_itemBank_{X}`, where X is the extra slot.
+  - This is a replacement for 16MB's MoreBankTabs mod that got deprecated
+- Nessie's EasySettings v1.1.8 (optional dependency used for configuration)
 
  Compatibility with other game versions is not guaranteed, especially for updates with major changes.
